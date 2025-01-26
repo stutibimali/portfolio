@@ -27,8 +27,69 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Phone:</strong> ${contactInfo.phone}</p>
         <p><strong>Email:</strong> <a href="mailto:${contactInfo.email}">${contactInfo.email}</a></p>
     `;
-    // Populate About Section
+
+    // Populate Publication Section
     document.getElementById("publication").innerHTML = publicationText;
+    
     // Set Email Link
     document.getElementById("email-link").href = `mailto:${contactInfo.email}`;
 });
+
+function viewPaper() {
+     // Simulate file download
+     window.open('documents/Publication paper.pdf', '_blank');
+}
+
+function viewReport() {
+    // Simulate file download
+    window.open('documents/Paper report.pdf', '_blank');
+}
+
+function viewCertificate() {
+    // Simulate file download
+    window.open('documents/certificate.pdf', '_blank');
+}
+
+function linkpublication() {
+    // link of publication 
+    window.open('https://ieeexplore.ieee.org/document/9716284', '_blank');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const githubUsername = "stutibimali";  // Replace with your GitHub username
+    const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;
+    
+    // Fetch repositories from GitHub API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => displayProjects(data))
+        .catch(error => console.error("Error fetching GitHub repos:", error));
+    
+    // Function to display repositories
+    function displayProjects(repos) {
+        const projectContainer = document.getElementById("project");
+        repos.forEach(repo => {
+            const repoElement = document.createElement("div");
+            repoElement.classList.add("repo");
+
+            // Create elements for each project
+            const repoTitle = document.createElement("h3");
+            repoTitle.textContent = repo.name;
+
+            const repoDescription = document.createElement("p");
+            repoDescription.textContent = repo.description ? repo.description : "No description provided";
+
+            const repoLink = document.createElement("a");
+            repoLink.href = repo.html_url;
+            repoLink.target = "_blank";
+            repoLink.textContent = "View on GitHub";
+
+            // Append project details to the container
+            repoElement.appendChild(repoTitle);
+            repoElement.appendChild(repoDescription);
+            repoElement.appendChild(repoLink);
+            projectContainer.appendChild(repoElement);
+        });
+    }
+});
+

@@ -71,3 +71,70 @@
     width: 700px;
     height: 400px;
 }
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between buttons */
+}
+
+.buttons button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6b0314; /* Button color */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #005e18; /* Hover color */
+}
+
+#project {
+    margin-top: 20px;
+}
+
+.repo {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eee1e1;
+}
+
+.repo h3 {
+    font-size: 24px;
+    color: #092d5b;
+}
+
+.repo p {
+    font-size: 16px;
+    color: #555;
+}
+
+.repo a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
+
+  /* Resume Section */
+  #resume {
+    margin-top: 20px;
+    height: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container {
+    width: 100%;
+    height: 100%;
+}

@@ -88,31 +88,51 @@
                 <p id="about-text" style="text-align:justify"></p>
                 <img class="picture" src="images/about-me.jpg" alt="About Me Image">
             </div>
+            <hr style="border: none; border-top: 2px double #7a6767; width: 100%; margin: 20px 0 40px 0;">
             <h2>Publication</h2>
             <div id="publication">
                <!-- publication details will be populated dynamically -->
             </div>
             <div class="publicationimg">
               <img class="publicationimage" src="images/publication.png" alt="Fire Detection">
+              <!-- Buttons Section -->
+              <div class="buttons">
+                <button onclick="viewPaper()">Paper</button>
+                <button onclick="viewReport()">Report</button>
+                <button onclick="viewCertificate()">Certificate</button>
+                <button onclick="linkpublication()">Link</button>
+                <div id="document-container" style="margin-top: 20px; display: none;"></div>
+              </div>
             </div>
-            
+            <hr style="border: none; border-top: 2px double #7a6767; width: 100%; margin: 20px 0 40px 0;">
             <h2>Industry Experience</h2>
             <div id="experience">
                
             </div>
+            <hr style="border: none; border-top: 2px double #7a6767; width: 100%; margin: 20px 0 40px 0;">
             <h2>Skills</h2>
             <div id="skill">
                
             </div>
-
+            <hr style="border: none; border-top: 2px double #7a6767; width: 100%; margin: 20px 0 40px 0;">
             <h2>Projects</h2>
             <div id="project">
+                <!-- Projects will be displayed here -->
+            </div>
+            <br><br>
+            <h2>Certification</h2>
+            <div id="Certification">
                
             </div>
+            <hr style="border: none; border-top: 2px double #7a6767; width: 100%; margin: 20px 0 40px 0;">
             <h2>Resume</h2>
             <div id="resume">
-               
+              <div class="pdf-container">
+                <iframe src="documents/resume.pdf" width="100%" height="100%" frameborder="0"></iframe>
+              </div>
+              <a href="documents/resume.pdf" download="Stuti_Bimali_Resume" class="resume-link">Download Resume</a>
             </div>
+            <br><br>
             <h2>Contact Information</h2>
             <div id="contact-info">
                 <!-- Contact details will be populated dynamically -->
