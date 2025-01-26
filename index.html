@@ -11,7 +11,7 @@
                 margin: 0;
                 height: 100vh;
                 display: grid;
-                grid-template-columns: 1fr 2fr; /* Two sections: Fixed (1/3) and Movable (2/3) */
+                grid-template-columns: 1fr 2fr;
             }
 
             /* Fixed Left Section */
@@ -25,31 +25,35 @@
                 text-align: center;
                 height: 100vh;
                 position: fixed;
-                width: 33.55% /* Fixed width */
+                width: 33.55%;
             }
 
             .content h1 {
-              padding-top: 50px ;
+                padding-top: 50px;
                 font-size: 40px;
                 font-weight: bold;
                 margin: 0;
             }
 
+            .social-icons a {
+                margin: 10px;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
             /* Scrollable Right Section */
             .movable {
-                background-color: #f0f0f0; /* Grey background */
-                scroll-behavior: auto; 
+                background-color: #f0f0f0;
+                scroll-behavior: auto;
                 width: 92%;
-                padding-left: 30px;
-                padding-right: 30px;
-                padding-top: 100px;
-             }
+                padding: 80px 30px 30px 30px;
+            }
 
             .movable h2 {
-                font-size: 24px;
-                margin-bottom: 10px;
-                color: #333;
-
+                font-size: 32px;
+                margin-bottom: 2px;
+                color: #092d5b;
             }
 
             .movable p {
@@ -62,44 +66,58 @@
     <body>
         <!-- Fixed Section -->
         <header>
-          <div class="content">
-            <h1>Stuti Bimali</h1>
-            <div class="social-icons">
-              <a href="https://github.com/stutibimali" target="_blank">
-                  <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/stuti-bimali" target="_blank">
-                  <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="mailto:sbima1@unh.newhaven.edu">
-                  <i class="fas fa-envelope"></i>
-              </a>
-          </div>
-            
-          </div>
+            <div class="content">
+                <h1>Stuti Bimali</h1>
+                <div class="social-icons">
+                    <a href="https://github.com/stutibimali" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/stuti-bimali" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a id="email-link" href="#">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
         </header>
         <!-- Scrollable Section -->
         <div class="movable">
-          
-          <h2>About Me</h2>
-          <div class="about">  
-            <p>
-                Welcome to my portfolio! I am a data scientist and aspiring professional dedicated to
-                leveraging technology and data to solve complex problems and create impactful solutions.
-            </p>
-            <img class= "picture" src="images/about-me.jpg" alt="About Me Image">
-          </div>
+            <h2>About Me</h2>
+            <div class="about">
+                <p id="about-text" style="text-align:justify"></p>
+                <img class="picture" src="images/about-me.jpg" alt="About Me Image">
+            </div>
+            <h2>Publication</h2>
+            <div id="publication">
+               <!-- publication details will be populated dynamically -->
+            </div>
+            <div class="publicationimg">
+              <img class="publicationimage" src="images/publication.png" alt="Fire Detection">
+            </div>
+            
+            <h2>Industry Experience</h2>
+            <div id="experience">
+               
+            </div>
+            <h2>Skills</h2>
+            <div id="skill">
+               
+            </div>
+
+            <h2>Projects</h2>
+            <div id="project">
+               
+            </div>
+            <h2>Resume</h2>
+            <div id="resume">
+               
+            </div>
             <h2>Contact Information</h2>
-            <p>
-                <strong>Address:</strong> 36 Baggott St., West Haven, CT 06516, United States<br>
-                <strong>Phone:</strong> 203-298-2102<br>
-                <strong>Email:</strong> <a href="mailto:sbima1@unh.newhaven.edu">sbima1@unh.newhaven.edu</a>
-            </p>
-            <h2>Portfolio</h2>
-            <p>
-                My work spans a variety of domains, including machine learning, data visualization, and
-                artificial intelligence. Check out my projects to learn more about my contributions.
-            </p>
+            <div id="contact-info">
+                <!-- Contact details will be populated dynamically -->
+            </div>
         </div>
+        <script src="js/main.js"></script>
     </body>
 </html>
