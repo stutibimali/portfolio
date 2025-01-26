@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const aboutText = 
     "Hi! I am Stuti Bimali, a Master's student in Data Science at the University of New Haven, with a background in Computer Science and Engineering. I am passionate about unlocking the potential of data to solve complex challenges and drive innovation.<br>"+
@@ -7,13 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     "<br>Let’s shape a future defined by data-driven innovation and meaningful change—together!"
     ;
     const contactInfo = {
-        address: "36 Baggott St., West Haven, CT 06516, United States",
-        phone: "203-298-2102",
+        address: "West Haven, CT 06516, United States",
+        phone: "+1 203-298-2102",
         email: "sbima1@unh.newhaven.edu",
+        altemail:"bimalistuti@gmail.com"
     };
 
     const publicationText = "<br><b style='font-size: 20px; color: grey'>Comparative study of different methods for fire detection using Convolutional Neural Network (CNN)</b><br>"+
-    "<br><b>Stuti Bimali</b>, Dr. Rachana P., Dr. B. Rajalakshmi, Tushar Bhat, Sukhmanjeet Kaur<br><br>"
+    "<br><b>Stuti Bimali</b>, Dr. Rachana P., Dr. B. Rajalakshmi, Tushar Bhat, Sukhmanjeet Kaur<br>"+
+    "<p><b>Published in:</b> 2022 4th International Conference on Smart Systems and Inventive Technology (ICSSIT)<br>"+
+    "<b>DOI:</b> <a href='https://ieeexplore.ieee.org/document/9716284'>10.1109/ICSSIT53264.2022.9716284</a><br>"+
+    "<b>Date of Conference:</b> 20-22 January 2022<br>"+
+    "<b>Conference Location:</b> Tirunelveli, India<br>"+
+    "<b>Publisher:</b> IEEE (Institute of Electrical and Electronics Engineers)<br>"+
+    "<b>Date Added to IEEE Xplore:</b> 25 February 2022</p>"
     ;
 
 
@@ -23,9 +32,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Populate Contact Info Section
     const contactContainer = document.getElementById("contact-info");
     contactContainer.innerHTML = `
-        <p><strong>Address:</strong> ${contactInfo.address}</p>
-        <p><strong>Phone:</strong> ${contactInfo.phone}</p>
-        <p><strong>Email:</strong> <a href="mailto:${contactInfo.email}">${contactInfo.email}</a></p>
+        <div class="contact-card">
+            <div class="contact-item">
+                <i class="icon-location"></i>
+                <span><strong>Address:</strong> ${contactInfo.address}</span>
+            </div>
+            <div class="contact-item">
+                <i class="icon-phone"></i>
+                <span><strong>Phone:</strong> ${contactInfo.phone}</span>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <span><strong>Email:</strong> <a href="mailto:${contactInfo.email}">${contactInfo.email}</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="icon-email"></i>
+                <span><strong>Alt-Email:</strong> <a href="mailto:${contactInfo.altemail}">${contactInfo.altemail}</a></span>
+            </div>
+        </div>
     `;
 
     // Populate Publication Section
@@ -93,3 +117,140 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const experiences = [
+        {
+            company: "iAssist Innovations Labs - Bangalore, India",
+            role: "AI Scientist",
+            time: "Jun 2023 - Jul 2024 ~ 1 yr 2 mos",
+            logo: "images/logo1.png",
+            companyinfo: "A research organization in IT Space that continuously works towards solving unsolved problems with innovative products.",
+            points: [
+                "Developed and implemented algorithms for optimizing bill processing in healthcare, enhancing data accuracy and operational efficiency through rigorous data analysis.",
+                "Automated QA processes for data extraction, ensuring high integrity and reliability of datasets for further research applications."
+            ]
+        },
+        {
+            company: "Cognizant - Bangalore, India",
+            role: "Programming Analyst Intern",
+            time: "Sept 2022 – Jan 2023 ~ 5 mos",
+            logo: "images/logo2.png",
+            companyinfo: "A global professional services company that helps businesses modernize their technology, processes, and experiences.",
+            points: [
+                "Conducted in-depth data analysis and reporting, providing actionable insights that supported data-driven decision-making in cross-functional teams.",
+                "Collaborated with multidisciplinary teams to enhance project outcomes, fostering a research oriented approach to problem-solving."
+            ]
+        }
+    ];
+
+    const experienceContainer = document.getElementById("experience");
+
+    experiences.forEach(exp => {
+        const expElement = document.createElement("div");
+        expElement.classList.add("experience-item");
+
+        const pointsHTML = exp.points.map(point => `<li>${point}</li>`).join("");
+        expElement.innerHTML = `
+            <div class="experience-content">
+                <div class="experience-header">
+                    <img class="company-logo" src="${exp.logo}" alt="${exp.company} Logo">
+                    <h3>${exp.company}</h3>
+                </div>
+                <div class="experience-text">
+                    <h4>${exp.role}</h4>
+                    <small>${exp.time}</small>
+                    <p>${exp.companyinfo}</p>
+                    <ul>
+                    <p>${pointsHTML}</p>
+                </ul>
+                </div><br><br>
+
+            </div>
+        `;
+
+        experienceContainer.appendChild(expElement);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const education = [
+        {
+            campus: "Tagliatela College of Engineering - University of New Haven",
+            major: "Masters in Data Science",
+            time: "Aug 2024 - present",
+            logo: "images/logo6.jpeg",
+            grade: "Grade: 4/4",
+            location: "West Haven, Connecticut, USA"
+        },
+        {
+            campus: "New Horizon College of Engineering - Visvesvaraya Technological University(VTU)",
+            major: "Bachelor of Engineering - Computer Science and Engineering",
+            time: "Jul 2018 - Jul 2022",
+            logo: "images/logo5.png",
+            grade: "Grade: 9.13/10",
+            location: "Bangalore, Karnataka, India"
+        },
+        {
+            campus: "GoldenGate International Secondary School",
+            major: "10+2 Biology",
+            time: "2016 - 2018",
+            logo: "images/logo4.png",
+            grade: "Grade: 3.03/4",
+            location: "Battisputali, Kathmandu, Nepal"
+        },
+        {
+            campus: "GEMS Higher Secondary School",
+            major: "Grade 10",
+            time: "2016",
+            logo: "images/logo3.png",
+            grade: "Grade: 3.7/4",
+            location: "Dhapakhel, Lalitpur, Nepal"
+        }
+    ];
+
+    const educationContainer = document.getElementById("education");
+
+    education.forEach(exp2 => {
+        const expElement2 = document.createElement("div");
+        expElement2.classList.add("education-item");
+
+        expElement2.innerHTML = `
+            <div class="education-content">
+                <div class="education-header">
+                    <img class="campus-logo" src="${exp2.logo}" alt="${exp2.campus} Logo">
+                    <h3>${exp2.campus}</h3>
+                </div>
+                <div class="education-text">
+                    <h4>${exp2.major}</h4>
+                    <small>${exp2.time}</small>
+                    <p>${exp2.location}</p>
+                    <p>${exp2.grade}</p>
+
+                </div><br><br>
+
+            </div>
+        `;
+
+        educationContainer.appendChild(expElement2);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const Certification = `
+        <ul>
+            <li style="list-style-type: square;"><b>Great Learning Academy</b> - Introduction to R<br><b style="font-size: 12px; color: #777;">July 2024</b></li>
+            <li style="list-style-type: square;"><b>British Airways</b> - Data Science Virtual Experience Program: Forage<br><b style="font-size: 12px; color: #777;">February 2023 to March 2023</b></li>
+            <li style="list-style-type: square;"><b>KPMG</b> - Data Analytics Consulting Virtual Internship: Forage<br><b style="font-size: 12px; color: #777;">February 2023</b></li>
+            <li style="list-style-type: square;"><b>IBM</b> - Machine Learning - Dimensionality Reduction: Cognitive Class<br><b style="font-size: 12px; color: #777;">June 16, 2022</b></li>
+            <li style="list-style-type: square;"><b>The Sparks Foundation</b> - Graduate Rotational Internship Program<br><b style="font-size: 12px; color: #777;">May 2022 to June 2022</b></li>
+            <li style="list-style-type: square;"><b>SkillUp</b> - Data Science with Python<br><b style="font-size: 12px; color: #777;">December 23, 2021</b></li>
+            <li style="list-style-type: square;"><b>SmartKnower</b> - Internship on Data Science<br><b style="font-size: 12px; color: #777;">April 1, 2021 to May 31, 2021</b></li>
+            <li style="list-style-type: square;"><b>Duke University</b> - Data Science Math Skills: Coursera<br><b style="font-size: 12px; color: #777;">August 31, 2020</b></li>
+            <li style="list-style-type: square;"><b>Google</b> - Operating Systems and You: Becoming a Power User: Coursera<br><b style="font-size: 12px; color: #777;">August 6, 2020</b></li>
+            <li style="list-style-type: square;"><b>Google</b> - The Bits and Bytes of Computer Networking: Coursera<br><b style="font-size: 12px; color: #777;">May 26, 2020</b></li>
+            <li style="list-style-type: square;"><b>Google</b> - Technical Support Fundamentals: Coursera<br><b style="font-size: 12px; color: #777;">April 27, 2020</b></li>
+        </ul>
+    `;
+
+    document.getElementById("Certification").innerHTML = Certification;
+});

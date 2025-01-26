@@ -1,4 +1,6 @@
+
 /* About Me Section with Side-by-Side Layout */
+
 .about {
     display: flex;
     align-items: flex-start; /* Align items to the top */
@@ -27,6 +29,16 @@
     padding-top: 17%;
 }
 
+.about .picture {
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 10s forwards; /* Fade-in animation over 2 seconds */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 /* General Contact and Portfolio Styling */
 .movable h2 {
     font-size: 24px;
@@ -48,6 +60,46 @@
 .movable a:hover {
     text-decoration: underline;
 }
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 33.55%; /* Match the width of the fixed section */
+    width: 66.45%; /* Remaining width */
+    background-color: #4a6589;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.fixed-nav ul li {
+    display: inline-block;
+}
+
+.fixed-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.fixed-nav ul li a:hover {
+    background-color: #0056b3;
+}
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -103,7 +155,7 @@
     border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #eee1e1;
+    background-color: #c5c0c0bb;
 }
 
 .repo h3 {
@@ -138,4 +190,242 @@
 .pdf-container {
     width: 100%;
     height: 100%;
+}
+
+#experience {
+    margin-top: 20px; /* Adds spacing at the top of the experience section */
+    padding: 10px; /* Adds padding inside the experience section */
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and the following text */
+    gap: 15px; /* Ensures consistent spacing between elements in the header */
+}
+
+.company-logo {
+    width: 45px; /* Slightly increased for better visibility */
+    height: 45px; /* Matches the width for perfect roundness */
+    border-radius: 50%; /* Ensures the logo is circular */
+    object-fit: cover; /* Keeps the logo proportions intact */
+    border: 1px solid #ddd; /* Adds a subtle border for definition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Enhances the logo with a light shadow */
+}
+
+.experience-header h3 {
+    margin: 0; /* Removes extra spacing around the heading */
+    font-size: 22px; /* Slightly larger for emphasis */
+    color: #2c3e50; /* More vibrant dark color for improved contrast */
+    font-weight: bold; /* Adds weight for better readability */
+}
+
+.experience-text h4 {
+    margin: 5px 0; /* Adds space above and below the subheading */
+    font-size: 18px; /* Slightly larger for hierarchy clarity */
+    color: #4c514d; /* Subtle neutral tone */
+    font-weight: 600; /* Adds slight boldness */
+}
+
+.experience-text p {
+    margin: 5px 0; /* Adds space above and below paragraphs */
+    color: #555; /* Neutral color for readability */
+    font-size: 15px; /* Slightly smaller to distinguish from headings */
+    line-height: 1.5; /* Improves readability with more line spacing */
+}
+
+.experience-text small {
+    color: #7f8c8d; /* Subtle grey for less prominent info */
+    font-style: italic; /* Differentiates additional info */
+    font-size: 13px; /* Small and non-distracting */
+}
+.experience-text ul {
+    list-style: none; /* Removes the default bullet points */
+    padding-left: 0; /* Removes the default indentation */
+    margin: 10px 0;
+}
+
+.experience-text ul li {
+    position: relative; /* Ensures the tick is positioned relative to the text */
+    padding-left: 25px; /* Adds space to the left for the tick */
+    margin-bottom: 8px; /* Adds space between list items */
+    font-size: 15px; /* Matches the text size with paragraphs */
+    color: #555; /* Neutral text color for readability */
+    line-height: 1.5; /* Improves spacing for readability */
+}
+
+.experience-text ul li::before {
+    content: "✔"; /* Unicode for a tick mark */
+    color: #4CAF50; /* Green color for the tick */
+    font-size: 16px; /* Matches the size proportionately */
+    position: absolute; /* Positions it relative to the list item */
+    left: 0; /* Aligns the tick perfectly */
+    top: 0; /* Centers the tick vertically */
+}
+
+#education {
+    margin-top: 20px;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and text */
+}
+
+.campus-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px; /* Space between logo and name */
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.education-header h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #333;
+    
+}
+.education-text h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    color: #4c514d;
+    
+}
+.education-text p {
+    margin: 0 0 5px;
+    color: #555;
+    font-size: 16px;
+}
+
+.education-text small {
+    color: #777;
+    font-style: italic;
+}
+
+#skill .skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-item b {
+    flex: 1;
+}
+
+.progress-bar-container {
+    flex: 2;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Alternate background colors for progress bars with 4 colors */
+#skill .skill-item:nth-child(4n+1) .progress-bar {
+    background-color: #4caf50; /* Green */
+}
+
+#skill .skill-item:nth-child(4n+2) .progress-bar {
+    background-color: #2196F3; /* Blue */
+}
+
+#skill .skill-item:nth-child(4n+3) .progress-bar {
+    background-color: #f44336; /* Red */
+}
+
+#skill .skill-item:nth-child(4n+4) .progress-bar {
+    background-color: #ff9800; /* Orange */
+}
+
+#skill .skill-item span {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Concepts Section Styling */
+#concepts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.concept-card {
+    background-color: #f5f5f5;
+    border: 2px solid #370471;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #370471;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #e9e4f0;
+    color: #1e024b;
+}
+/* Contact Section Styling */
+.contact-container {
+    margin-top: 20px;
+}
+
+.contact-card {
+    background-color: #f5f5f5;
+    border: 2px solid #370471;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #370471;
+}
+
+.contact-item i {
+    font-size: 20px;
+    color: #370471;
+    margin-right: 10px;
+}
+
+.contact-item a {
+    color: #370471;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #1e024b;
+}
+
+/* Example Icon Styling */
+.icon-location::before {
+    content: "📍"; /* You can replace this with an icon font if preferred */
+}
+
+.icon-phone::before {
+    content: "📞";
+}
+
+.icon-email::before {
+    content: "✉️";
 }
