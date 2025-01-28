@@ -238,19 +238,44 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const Certification = `
         <ul>
-            <li style="list-style-type: square;"><b>Great Learning Academy</b> - Introduction to R<br><b style="font-size: 12px; color: #777;">July 2024</b></li>
-            <li style="list-style-type: square;"><b>British Airways</b> - Data Science Virtual Experience Program: Forage<br><b style="font-size: 12px; color: #777;">February 2023 to March 2023</b></li>
-            <li style="list-style-type: square;"><b>KPMG</b> - Data Analytics Consulting Virtual Internship: Forage<br><b style="font-size: 12px; color: #777;">February 2023</b></li>
-            <li style="list-style-type: square;"><b>IBM</b> - Machine Learning - Dimensionality Reduction: Cognitive Class<br><b style="font-size: 12px; color: #777;">June 16, 2022</b></li>
-            <li style="list-style-type: square;"><b>The Sparks Foundation</b> - Graduate Rotational Internship Program<br><b style="font-size: 12px; color: #777;">May 2022 to June 2022</b></li>
-            <li style="list-style-type: square;"><b>SkillUp</b> - Data Science with Python<br><b style="font-size: 12px; color: #777;">December 23, 2021</b></li>
-            <li style="list-style-type: square;"><b>SmartKnower</b> - Internship on Data Science<br><b style="font-size: 12px; color: #777;">April 1, 2021 to May 31, 2021</b></li>
-            <li style="list-style-type: square;"><b>Duke University</b> - Data Science Math Skills: Coursera<br><b style="font-size: 12px; color: #777;">August 31, 2020</b></li>
-            <li style="list-style-type: square;"><b>Google</b> - Operating Systems and You: Becoming a Power User: Coursera<br><b style="font-size: 12px; color: #777;">August 6, 2020</b></li>
-            <li style="list-style-type: square;"><b>Google</b> - The Bits and Bytes of Computer Networking: Coursera<br><b style="font-size: 12px; color: #777;">May 26, 2020</b></li>
-            <li style="list-style-type: square;"><b>Google</b> - Technical Support Fundamentals: Coursera<br><b style="font-size: 12px; color: #777;">April 27, 2020</b></li>
+            <li style="list-style-type: square;"><b>Great Learning Academy</b> - Introduction to R<b style="font-size: 12px; color: #777;">  -  July 2024</b></li><br>
+            <li style="list-style-type: square;"><b>British Airways</b> - Data Science Virtual Experience Program: Forage<b style="font-size: 12px; color: #777;">  -  February 2023 to March 2023</b></li><br>
+            <li style="list-style-type: square;"><b>KPMG</b> - Data Analytics Consulting Virtual Internship: Forage<b style="font-size: 12px; color: #777;">  -  February 2023</b></li><br>
+            <li style="list-style-type: square;"><b>IBM</b> - Machine Learning - Dimensionality Reduction: Cognitive Class<b style="font-size: 12px; color: #777;">  -  June 16, 2022</b></li><br>
+            <li style="list-style-type: square;"><b>The Sparks Foundation</b> - Graduate Rotational Internship Program<b style="font-size: 12px; color: #777;">  -  May 2022 to June 2022</b></li><br>
+            <li style="list-style-type: square;"><b>SkillUp</b> - Data Science with Python<b style="font-size: 12px; color: #777;">  -  December 23, 2021</b></li><br>
+            <li style="list-style-type: square;"><b>SmartKnower</b> - Internship on Data Science<b style="font-size: 12px; color: #777;">  -  April 1, 2021 to May 31, 2021</b></li><br>
+            <li style="list-style-type: square;"><b>Duke University</b> - Data Science Math Skills: Coursera<b style="font-size: 12px; color: #777;">  -  August 31, 2020</b></li><br>
+            <li style="list-style-type: square;"><b>Google</b> - Operating Systems and You: Becoming a Power User: Coursera<b style="font-size: 12px; color: #777;">  -  August 6, 2020</b></li><br>
+            <li style="list-style-type: square;"><b>Google</b> - The Bits and Bytes of Computer Networking: Coursera<b style="font-size: 12px; color: #777;">  -  May 26, 2020</b></li><br>
+            <li style="list-style-type: square;"><b>Google</b> - Technical Support Fundamentals: Coursera<b style="font-size: 12px; color: #777;">  -  April 27, 2020</b></li>
         </ul>
     `;
 
     document.getElementById("Certification").innerHTML = Certification;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const worksem = `
+        <ul>
+            <li style="list-style-type: square;"><b>Webinar</b></li><br>
+                <ul>
+                    <li style="list-style-type: circle;">' AI SOLUTION FOR ENTERPRISES AND CONTAINERISING APPLICATIONS USING E4S '<b> conducted by ANNA University</b><b style="font-size: 12px; color: #777;"> - August 14, 2020</b></li>
+                    <br>
+                    <li style="list-style-type: circle;">' OpenPOWER BIG DATA AI '<b> conducted by University of Wisconsin Platteville</b><b style="font-size: 12px; color: #777;"> - June 19, 2020</b></li>
+                </ul>
+                <br>
+            <li style="list-style-type: square;"><b>Workshop</b></li><br>
+                <ul>
+                    <li style="list-style-type: circle;">' UNIX AND SHELL PROGRAMMING '<b> conducted by PraLoTech Solutions LLP</b><b style="font-size: 12px; color: #777;"> - November 3, 2019</b></li>
+                </ul>
+                <br>
+            <li style="list-style-type: square;"><b>Seminar</b></li><br>
+                <ul>
+                    <li style="list-style-type: circle;">' NewSpace - An Era of Small Satellites: Opportunities and Challenges '<b> hosted by Indian Technology Congress Association and UNISEC India</b><b style="font-size: 12px; color: #777;"> - April 11, 2019</b></li>
+                </ul>
+        </ul>
+    `;
+
+    document.getElementById("workshop").innerHTML = worksem;
 });
