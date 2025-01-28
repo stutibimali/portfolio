@@ -126,8 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
             logo: "images/logo1.png",
             companyinfo: "A research organization in IT Space that continuously works towards solving unsolved problems with innovative products.",
             points: [
-                "Developed and implemented algorithms for optimizing bill processing in healthcare, enhancing data accuracy and operational efficiency through rigorous data analysis.",
-                "Automated QA processes for data extraction, ensuring high integrity and reliability of datasets for further research applications."
+                "Designed and implemented a system to analyze hospital bills, enabling banks to efficiently manage and process insurance claims, significantly enhancing customer experience",
+                "Automated key processes in a major project, increasing the automation rate from 5% to 30% in the initial stages, and trained the team to build on this progress for sustainable growth.",
+                "Developed and deployed algorithms to optimize bill processing in healthcare, improving data accuracy and operational efficiency through advanced data analysis techniques.",
+                "Supported the QA team by resolving real-time issues within five minutes, minimizing downtime and ensuring smooth project execution.",
+                "Automated QA processes for data extraction, ensuring high data integrity and reliability for subsequent research and application development.",
+                "Collaborated with cross-functional teams to deliver innovative solutions under tight deadlines, demonstrating technical expertise, problem-solving skills, and a proactive approach to innovation."
             ]
         },
         {
@@ -138,7 +142,11 @@ document.addEventListener("DOMContentLoaded", () => {
             companyinfo: "A global professional services company that helps businesses modernize their technology, processes, and experiences.",
             points: [
                 "Conducted in-depth data analysis and reporting, providing actionable insights that supported data-driven decision-making in cross-functional teams.",
-                "Collaborated with multidisciplinary teams to enhance project outcomes, fostering a research oriented approach to problem-solving."
+                "Collaborated with multidisciplinary teams to analyze and interpret large datasets, enhancing project outcomes through a researchoriented approach to problem-solving.",
+                "Gained hands-on experience in core data science concepts and tools, including machine learning algorithms, SQL, Python, and Java.",
+                "Applied theoretical knowledge to real-world data problems, designing and implementing models for data analysis and processing.",
+                "Developed Java applications for data management, gaining proficiency in object-oriented programming and data structures.",
+                "Presented learning outcomes and conceptual models to the team, refining communication and presentation skills."
             ]
         }
     ];
