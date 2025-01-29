@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactInfo = {
         address: "West Haven, CT 06516, United States",
         phone: "+1 203-298-2102",
-        email: "sbima1@unh.newhaven.edu",
-        altemail:"bimalistuti@gmail.com"
+        altemail: "sbima1@unh.newhaven.edu",
+        email:"bimalistuti@gmail.com"
     };
 
     const publicationText = "<br><b style='font-size: 20px; color: grey'>Comparative study of different methods for fire detection using Convolutional Neural Network (CNN)</b><br>"+
