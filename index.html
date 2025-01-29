@@ -3,7 +3,8 @@
     <head>
         <title>Stuti</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <meta name="description" content="Portfolio website of Stuti Bimali, showcasing skills, projects, and experience in data science and software development.">
         <meta name="keywords" content="Portfolio, Data Science, Software Development, Skills, Projects">
         <link rel="stylesheet" href="css/style.css">
@@ -14,6 +15,7 @@
                 margin: 0;
                 height: 100vh;
                 display: flex;
+                overflow: hidden;
             }
 
             .content {
@@ -71,10 +73,34 @@
                 line-height: 1.6;
                 color: #555;
             }
+            /* Prevent mobile devices from accessing */
+            @media screen and (max-width: 1024px) {
+                body {
+                    display: none; /* Hides the content on mobile */
+                }
+
+                .mobile-alert {
+                    text-align: center;
+                    font-size: 24px;
+                    color: red;
+                    margin-top: 20%;
+                }
+            }
+             /* Ensure content is centered */
+             .mobile-alert {
+                text-align: center;
+                font-size: 30px;
+                color: red;
+                margin-top: 20%;
+            }
 
         </style>
     </head>
     <body>
+        <!-- Mobile Alert -->
+        <div class="mobile-alert">
+            This website is only accessible on desktop. Please use a desktop browser to view it.
+        </div>
         <!-- Fixed Section -->
         <header>
             <div class="content">
@@ -372,6 +398,13 @@
             </div>
            <br><br><br><br> <br><br><br><br>
         </div>
+        <script>
+            // JavaScript to detect mobile devices and hide content
+            if (window.innerWidth <= 1024) {
+                document.body.style.display = 'none'; // Hide the page for mobile devices
+                alert('This website is only accessible on desktop. Please use a desktop browser.');
+            }
+        </script>
         <script src="js/main.js"></script>
     </body>
 </html>
