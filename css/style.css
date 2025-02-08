@@ -431,3 +431,52 @@
 .icon-email::before {
     content: "✉️";
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto; /* Allow scrolling if the content overflows */
+}
+
+.overlay-content {
+    position: relative;
+    width: 80%;  /* Increase the width of the overlay */
+    height: 80%; /* Increase the height of the overlay */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.overlay-content img,
+.overlay-content iframe {
+    width: 100%;   /* Use the full available width */
+    height: 100%;  /* Use the full available height */
+    object-fit: contain; /* Maintain aspect ratio for both images and PDFs */
+}
+
+.overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    z-index: 2000;
+}
+
