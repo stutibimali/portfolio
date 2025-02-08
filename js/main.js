@@ -246,6 +246,12 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const Certification = `
         <ul>
+            <li style="list-style-type: square;"><b>LinkedIn Learning</b> - HTML Essential Training<b style="font-size: 12px; color: #777;">  -  January 31, 2025</b><br>
+            <button onclick="showCertificate('documents/stutibimali_HTML Essential Training.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>LinkedIn Learning</b> - Python: Working with REST and Web Data<b style="font-size: 12px; color: #777;">  -  January 30, 2025</b><br>
+            <button onclick="showCertificate('documents/StutiBimali_Python Working with REST and Web Data.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>LinkedIn Learning</b> - Data Science Foundations: Data Engineering<b style="font-size: 12px; color: #777;">  -  January 27, 2025</b><br>
+            <button onclick="showCertificate('documents/CertificateOfCompletion_Data Science Foundations Data Engineering-StutiB.pdf')">Show</button></li><br>
             <li style="list-style-type: square;"><b>Great Learning Academy</b> - Introduction to R<b style="font-size: 12px; color: #777;">  -  July 2024</b><br>
             <button onclick="showCertificate('documents/R.png')">Show</button></li><br>
             <li style="list-style-type: square;"><b>British Airways</b> - Data Science Virtual Experience Program: Forage<b style="font-size: 12px; color: #777;">  -  February 2023 to March 2023</b><br>
@@ -267,7 +273,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <li style="list-style-type: square;"><b>Google</b> - The Bits and Bytes of Computer Networking: Coursera<b style="font-size: 12px; color: #777;">  -  May 26, 2020</b><br>
             <button onclick="showCertificate('documents/google certificate2.pdf')">Show</button></li><br>
             <li style="list-style-type: square;"><b>Google</b> - Technical Support Fundamentals: Coursera<b style="font-size: 12px; color: #777;">  -  April 27, 2020</b><br>
-            <button onclick="showCertificate('documents/google certificate.pdf')">Show</button></li>
+            <button onclick="showCertificate('documents/google certificate.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>Rhyme</b> - Object-Oriented Programming with Java: Coursera<b style="font-size: 12px; color: #777;">  -  April 25, 2020</b><br>
+            <button onclick="showCertificate('documents/java program certificate.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>Coursera Project Network</b> - Object-Oriented Programming with Java<b style="font-size: 12px; color: #777;">  -  April 25, 2020</b><br>
+            <button onclick="showCertificate('documents/Coursera XGNASK4MUKAY.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>Coursera Project Network</b> - Create Your First Python Program<b style="font-size: 12px; color: #777;">  -  April 22, 2020</b><br>
+            <button onclick="showCertificate('documents/python first certificate.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>Coursera Project Network</b> - Command Line in Linux<b style="font-size: 12px; color: #777;">  -  April 21, 2020</b><br>
+            <button onclick="showCertificate('documents/Coursera DP75XSGCBYW9.pdf')">Show</button></li><br>
+            <li style="list-style-type: square;"><b>Coursera Project Network</b> - Javascript animation for websites, storytelling, data visualization and games<b style="font-size: 12px; color: #777;">  -  April 21, 2020</b><br>
+            <button onclick="showCertificate('documents/Coursera H4SQNCA8MZXG.pdf')">Show</button></li>
             
         </ul>
     `;
@@ -280,18 +296,38 @@ document.addEventListener("DOMContentLoaded", () => {
                     <br>
                     <li style="list-style-type: circle;">' OpenPOWER BIG DATA AI '<b> conducted by University of Wisconsin Platteville</b><b style="font-size: 12px; color: #777;"> - June 19, 2020</b><br>
                     <button onclick="showCertificate('documents/certificate3_14.pdf')">Show</button></li>
+                    <br>
                 </ul>
                 <br>
             <li style="list-style-type: square;"><b>Workshop</b></li><br>
                 <ul>
+                    <li style="list-style-type: circle;">' Introduction to Computer Algorithms '<b> conducted by SGP GLOBAL IT ACADEMY PRIVATE LIMITED</b><b style="font-size: 12px; color: #777;"> - April 24, 2020</b><br>
+                    <button onclick="showCertificate('documents/Stuti Bimali.png')">Show</button></li>
+                    <br>
                     <li style="list-style-type: circle;">' UNIX AND SHELL PROGRAMMING '<b> conducted by PraLoTech Solutions LLP</b><b style="font-size: 12px; color: #777;"> - November 3, 2019</b><br>
                     <button onclick="showCertificate('certificates/unix_shell_programming.pdf')">Show</button></li>
+                    <br>
+                    
                 </ul>
                 <br>
             <li style="list-style-type: square;"><b>Seminar</b></li><br>
                 <ul>
                     <li style="list-style-type: circle;">' NewSpace - An Era of Small Satellites: Opportunities and Challenges '<b> hosted by Indian Technology Congress Association and UNISEC India</b><b style="font-size: 12px; color: #777;"> - April 11, 2019</b><br>
                     <button onclick="showCertificate('certificates/newspace_small_satellites.pdf')">Show</button></li>
+                    <br>
+                </ul>
+            <li style="list-style-type: square;"><b>Quiz</b></li><br>
+                <ul>
+                    <li style="list-style-type: circle;"> Quiz on ' Object Oriented Programming in Java '<b> organized by Department of Computer Science and Engineering, Shaikh College of Engineering and Technology Belagavi </b><b style="font-size: 12px; color: #777;"></b><br>
+                    <button onclick="showCertificate('documents/Quiz.png')">Show</button></li>
+                    <br>
+                    <li style="list-style-type: circle;"> Online Quiz on ' C Programming '<b> organized by Department of CSE, Vemana Institute of Technology, Bengaluru </b><b style="font-size: 12px; color: #777;"> - July 14, 2020</b><br>
+                    <button onclick="showCertificate('documents/quiz2.pdf')">Show</button></li>
+                    <br>
+                    <li style="list-style-type: circle;"> Quiz on ' ARM7 Microcontroller & its Instruction set '<b> organized by Department of Computer Science and Engineering, TOCE </b><b style="font-size: 12px; color: #777;"></b><br>
+                    <button onclick="showCertificate('documents/quiz1.pdf')">Show</button></li>
+                    
+                    
                 </ul>
         </ul>
     `;
