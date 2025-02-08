@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button onclick="showCertificate('documents/Stuti Bimali.png')">Show</button></li>
                     <br>
                     <li style="list-style-type: circle;">' UNIX AND SHELL PROGRAMMING '<b> conducted by PraLoTech Solutions LLP</b><b style="font-size: 12px; color: #777;"> - November 3, 2019</b><br>
-                    <button onclick="showCertificate('certificates/unix_shell_programming.pdf')">Show</button></li>
+                    
                     <br>
                     
                 </ul>
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <li style="list-style-type: square;"><b>Seminar</b></li><br>
                 <ul>
                     <li style="list-style-type: circle;">' NewSpace - An Era of Small Satellites: Opportunities and Challenges '<b> hosted by Indian Technology Congress Association and UNISEC India</b><b style="font-size: 12px; color: #777;"> - April 11, 2019</b><br>
-                    <button onclick="showCertificate('certificates/newspace_small_satellites.pdf')">Show</button></li>
+                    
                     <br>
                 </ul>
             <li style="list-style-type: square;"><b>Quiz</b></li><br>
