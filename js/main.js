@@ -361,3 +361,8 @@ function showCertificate(certPath) {
 function closeOverlay() {
     document.getElementById("overlay").style.display = "none";
 }
+// Hide the page for mobile devices
+if (window.innerWidth <= 1024) {
+    document.body.style.display = 'none'; // Hide the page
+    alert('This website is only accessible on desktop. Please use a desktop browser.');
+}

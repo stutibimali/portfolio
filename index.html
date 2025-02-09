@@ -10,96 +10,140 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <style>
-            
-            body {
-                margin: 0;
-                height: 100vh;
-                display: flex;
-                overflow: hidden;
-            }
+           /* Default layout for desktop */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
 
-            .content {
-                background: url('images/bg.jpeg') no-repeat center center;
-                background-size: cover;
-                display: flex;
-                justify-content: center;
-                align-items: top;
-                color: white;
-                text-align: center;
-                height: 100vh;
-                position: fixed;
-                width: 33.55%;
-                top: 0;
-                left: 0;
-                z-index: 1; /* Keeps the left section on top */
-            }
+.content {
+    background: url('images/bg.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title and social icons */
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    position: fixed;
+    width: 33.55%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Keeps the left section on top */
+}
 
-            .content h1 {
-                padding-top: 50px;
-                font-size: 30px;
-                font-weight: bold;
-                margin: 0;
-            }
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px; /* Space at the bottom */
+    justify-content: flex-end; /* Align icons to the right */
+    width: 100%;
+    padding-right: 20px; /* Add padding to the right */
+}
 
-            .social-icons a {
-                margin: 5px;
-                color: white;
-                font-size: 20px;
-                text-decoration: none;
-            }
+.movable {
+    background-color: #f0f0f0;
+    height: 100vh;  /* Full height of the viewport */
+    width: 62%;  /* Adjust width if needed */
+    margin-left: 33.55%;  /* Aligns the movable section to the right */
+    position: fixed;
+    top: 0;
+    right: 0;  /* Fixed to the right */
+    padding: 100px 30px 30px 30px;  /* Ensure there's padding at the top */
+    overflow-y: auto;  /* Allows vertical scrolling */
+    padding-bottom: 50px;
+    z-index: 0; /* Ensure it stays behind the fixed section */
+}
 
-            .movable {
-                background-color: #f0f0f0;
-                height: 100vh;  /* Full height of the viewport */
-                width: 62%;  /* Adjust width if needed */
-                margin-left: 33.55%;  /* Aligns the movable section to the right */
-                position: fixed;
-                top: 0;
-                right: 0;  /* Fixed to the right */
-                padding: 100px 30px 30px 30px;  /* Ensure there's padding at the top */
-                overflow-y: auto;  /* Allows vertical scrolling */
-                padding-bottom: 50px;
-                
-            }
+/* Navigation Styling */
+.navi {
+    position: fixed;
+    top: 100vh; /* Initially below the fixed section */
+    left: 0;
+    width: 100%;
+    background-color: #4a6589;
+    z-index: 2; /* Ensure nav is above movable section */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-            .movable h2 {
-                font-size: 38px;
-                margin-bottom: 2px;
-                color: #092d5b;
-            }
 
-            .movable p {
-                font-size: 16px;
-                line-height: 1.6;
-                color: #555;
-            }
-            /* Prevent mobile devices from accessing */
-            @media screen and (max-width: 1024px) {
-                body {
-                    display: none; /* Hides the content on mobile */
-                }
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 1200px) {
+    body {
+        flex-direction: column; /* Stack sections vertically */
+        overflow-y: auto; /* Allow scrolling */
+    }
 
-                .mobile-alert {
-                    text-align: center;
-                    font-size: 24px;
-                    color: red;
-                    margin-top: 20%;
-                }
-            }
-             /* Ensure content is centered */
-             .mobile-alert {
-                text-align: center;
-                font-size: 30px;
-                color: red;
-                margin-top: 20%;
-            }
+    .content {
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        position: fixed; /* Fixed at the top */
+        top: 0;
+        left: 0;
+        z-index: 2; /* Ensure it stays on top */
+        padding: 20px 0; /* Add padding */
+    }
+
+    .social-icons {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: 20px; /* Add padding to the right */
+    }
+
+    .navi {
+        position: fixed;
+        top: auto; /* Reset top */
+        bottom: 0; /* Fixed at the bottom */
+        left: 0;
+        width: 100%; /* Full width */
+        z-index: 2; /* Ensure nav is above movable section */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .movable {
+        width: 90%; /* Full width */
+        margin-left: 0; /* Remove margin */
+        position: relative; /* Remove fixed positioning */
+        margin-right: 0; /* Adjust padding */
+        height: auto; /* Adjust height */
+        overflow-y: auto; /* Allow scrolling */
+        margin-top: 100px; /* Space for fixed content and nav */
+        padding-left: 50px; /* Shift content to the left */
+    }
+
+    /* Adjust navigation for smaller screens */
+    .fixed-nav ul {
+        gap: 10px; /* Reduce space between navigation items */
+    }
+
+    .fixed-nav ul li a {
+        font-size: 12px; /* Smaller font size for smaller screens */
+        padding: 14px 18px; /* Reduced padding */
+    }
+}
+
+/* Hide content on mobile devices */
+@media screen and (max-width: 1024px) {
+    body {
+        display: none; /* Hide the content on mobile */
+    }
+
+    .mobile-alert {
+        display: block; /* Show the mobile alert */
+    }
+}
 
         </style>
     </head>
     <body>
         <!-- Mobile Alert -->
         <div class="mobile-alert">
-            This website is only accessible on desktop. Please use a desktop browser to view it.
+            This website is only accessible on desktop. Please use a desktop browser in fullscreen to view it.
         </div>
         <!-- Fixed Section -->
         <header>
