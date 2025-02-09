@@ -134,52 +134,88 @@
 }
 
 .buttons button {
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 12px 24px; /* Slightly larger padding for better clickability */
+    font-size: 12px; /* Slightly larger font size for better readability */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Softer rounded corners */
     cursor: pointer;
-    background-color: #6f6e71; /* Button color */
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Blue gradient */
     color: white;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for a 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
 .buttons button:hover {
-    background-color: #9da39f; /* Hover color */
+    background: linear-gradient(135deg, #5dade2, #3498db); /* Lighter blue gradient on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
+.buttons button:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow for a pressed effect */
+}
+
+.buttons button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Blue focus outline */
+}
+/* Projects Section Styling */
 #project {
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
 }
 
 .repo {
     border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #c5c0c0bb;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.repo:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .repo h3 {
     font-size: 24px;
-    color: #000000;
+    color: #370471; /* Theme color */
+    margin-bottom: 10px;
 }
 
 .repo p {
     font-size: 16px;
     color: #555;
+    margin-bottom: 15px;
 }
 
 .repo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
     color: #023367;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .repo a:hover {
+    color: #1e024b; /* Darker color on hover */
     text-decoration: underline;
 }
 
+/* GitHub icon styling */
+.repo a i {
+    font-size: 20px;
+}
+
   /* Resume Section */
-  #resume {
+#resume {
     margin-top: 20px;
     height: 600px;
     background-color: #f9f9f9;
@@ -481,3 +517,76 @@
     z-index: 2000;
 }
 
+.certificate-button {
+    padding: 10px 12px; /* Slightly larger padding for better clickability */
+    font-size: 11px; /* Slightly larger font size for better readability */
+    border: none;
+    border-radius: 8px; /* Softer rounded corners */
+    cursor: pointer;
+    background: linear-gradient(135deg, #728a1c, #19435f); /* Blue gradient */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow for a 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    margin-top: 10px; /* Add some spacing above the button */
+}
+
+.certificate-button:hover {
+    background: linear-gradient(135deg, #5dade2, #3498db); /* Lighter blue gradient on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.certificate-button:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow for a pressed effect */
+}
+
+.certificate-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Blue focus outline */
+}
+
+.pdf-container {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style for the download button */
+.resume-link {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #e8efe6, #d8f77c); /* Blue gradient */
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.resume-link:hover {
+    background: linear-gradient(135deg, #81878b, #3498db); /* Lighter blue gradient */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Slight lift */
+}
+
+/* Active effect (when clicked) */
+.resume-link:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus effect (for accessibility) */
+.resume-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(5, 5, 5, 0.5);
+}

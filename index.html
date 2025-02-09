@@ -1,150 +1,145 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
     <head>
-        <title>Stuti</title>
+        <title>Stuti Bimali</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <meta name="description" content="Portfolio website of Stuti Bimali, showcasing skills, projects, and experience in data science and software development.">
         <meta name="keywords" content="Portfolio, Data Science, Software Development, Skills, Projects">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <style>
            /* Default layout for desktop */
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
-}
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                overflow: hidden;
+            }
 
-.content {
-    background: url('images/bg.jpeg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between title and social icons */
-    align-items: center;
-    color: white;
-    text-align: center;
-    height: 100vh;
-    position: fixed;
-    width: 33.55%;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Keeps the left section on top */
-}
+            .content {
+                background: url('images/bg.jpeg') no-repeat center center;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Space between title and social icons */
+                align-items: center;
+                color: white;
+                text-align: center;
+                height: 100vh;
+                position: fixed;
+                width: 33.55%;
+                top: 0;
+                left: 0;
+                z-index: 1; /* Keeps the left section on top */
+            }
 
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px; /* Space at the bottom */
-    justify-content: flex-end; /* Align icons to the right */
-    width: 100%;
-    padding-right: 20px; /* Add padding to the right */
-}
+            .social-icons {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 20px; /* Space at the bottom */
+                justify-content: flex-end; /* Align icons to the right */
+                width: 100%;
+                padding-right: 20px; /* Add padding to the right */
+            }
 
-.movable {
-    background-color: #f0f0f0;
-    height: 100vh;  /* Full height of the viewport */
-    width: 62%;  /* Adjust width if needed */
-    margin-left: 33.55%;  /* Aligns the movable section to the right */
-    position: fixed;
-    top: 0;
-    right: 0;  /* Fixed to the right */
-    padding: 100px 30px 30px 30px;  /* Ensure there's padding at the top */
-    overflow-y: auto;  /* Allows vertical scrolling */
-    padding-bottom: 50px;
-    z-index: 0; /* Ensure it stays behind the fixed section */
-}
+            .movable {
+                background-color: #f0f0f0;
+                height: 100vh;  /* Full height of the viewport */
+                width: 62%;  /* Adjust width if needed */
+                margin-left: 33.55%;  /* Aligns the movable section to the right */
+                position: fixed;
+                top: 0;
+                right: 0;  /* Fixed to the right */
+                padding: 100px 30px 30px 30px;  /* Ensure there's padding at the top */
+                overflow-y: auto;  /* Allows vertical scrolling */
+                padding-bottom: 50px;
+                z-index: 0; /* Ensure it stays behind the fixed section */
+            }
 
-/* Navigation Styling */
-.navi {
-    position: fixed;
-    top: 100vh; /* Initially below the fixed section */
-    left: 0;
-    width: 100%;
-    background-color: #4a6589;
-    z-index: 2; /* Ensure nav is above movable section */
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+            /* Navigation Styling */
+            .navi {
+                position: fixed;
+                top: 100vh; /* Initially below the fixed section */
+                left: 0;
+                width: 100%;
+                background-color: #4a6589;
+                z-index: 2; /* Ensure nav is above movable section */
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
 
 
-/* Responsive layout for smaller screens */
-@media screen and (max-width: 1200px) {
-    body {
-        flex-direction: column; /* Stack sections vertically */
-        overflow-y: auto; /* Allow scrolling */
-    }
+            /* Responsive layout for smaller screens */
+            @media screen and (max-width: 1024px) {
+                body {
+                    flex-direction: column; /* Stack sections vertically */
+                    overflow-y: auto; /* Allow scrolling */
+                }
 
-    .content {
-        width: 100%; /* Full width */
-        height: auto; /* Adjust height */
-        position: fixed; /* Fixed at the top */
-        top: 0;
-        left: 0;
-        z-index: 2; /* Ensure it stays on top */
-        padding: 20px 0; /* Add padding */
-    }
+                .content {
+                    background: url('images/bg2.jpg') no-repeat center center;
+                    color: rgb(215, 184, 26);
+                    width: 100%; /* Full width */
+                    height: auto; /* Adjust height */
+                    position: fixed; /* Fixed at the top */
+                    top: 0;
+                    left: 0;
+                    z-index: 2; /* Ensure it stays on top */
+                    padding: 20px 10px;  /* Add padding */
+                    align-items: start;
+                    padding-right: 5px;
+                }
+                .content h1 {
+                    padding-top: 50px; /* Reduce top padding */
+                    align-content: first baseline;  /* Add left padding */
+                    font-size: 44px; /* Slightly smaller font size */
+                    margin: 0;
+                    
+                }
+                .social-icons {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    padding-right: 20px; /* Add padding to the right */
+                }
 
-    .social-icons {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        padding-right: 20px; /* Add padding to the right */
-    }
+                .navi {
+                    position: fixed;
+                    top: auto; /* Reset top */
+                    bottom: 0; /* Fixed at the bottom */
+                    left: 0;
+                    width: 100%; /* Full width */
+                    z-index: 10; /* Ensure nav is above movable section */
+                    padding: 10px 20px; /* Adjust padding */
+                }
 
-    .navi {
-        position: fixed;
-        top: auto; /* Reset top */
-        bottom: 0; /* Fixed at the bottom */
-        left: 0;
-        width: 100%; /* Full width */
-        z-index: 2; /* Ensure nav is above movable section */
-        padding: 10px 20px; /* Adjust padding */
-    }
+                .movable {
+                    width: 95%; /* Full width */
+                    margin-left: 0; /* Remove margin */
+                    position: relative; /* Remove fixed positioning */
+                    margin-right: 0; /* Adjust padding */
+                    height: auto; /* Adjust height */
+                    overflow-y: auto; /* Allow scrolling */
+                    margin-top: 100px; /* Space for fixed content and nav */
+                    padding-left: 20px; /* Shift content to the left */
+                }
 
-    .movable {
-        width: 90%; /* Full width */
-        margin-left: 0; /* Remove margin */
-        position: relative; /* Remove fixed positioning */
-        margin-right: 0; /* Adjust padding */
-        height: auto; /* Adjust height */
-        overflow-y: auto; /* Allow scrolling */
-        margin-top: 100px; /* Space for fixed content and nav */
-        padding-left: 50px; /* Shift content to the left */
-    }
+                /* Adjust navigation for smaller screens */
+                .fixed-nav ul {
+                    gap: 10px; /* Reduce space between navigation items */
+                }
 
-    /* Adjust navigation for smaller screens */
-    .fixed-nav ul {
-        gap: 10px; /* Reduce space between navigation items */
-    }
-
-    .fixed-nav ul li a {
-        font-size: 12px; /* Smaller font size for smaller screens */
-        padding: 14px 18px; /* Reduced padding */
-    }
-}
-
-/* Hide content on mobile devices */
-@media screen and (max-width: 1024px) {
-    body {
-        display: none; /* Hide the content on mobile */
-    }
-
-    .mobile-alert {
-        display: block; /* Show the mobile alert */
-    }
-}
-
+                .fixed-nav ul li a {
+                    font-size: 12px; /* Smaller font size for smaller screens */
+                    padding: 14px 18px; /* Reduced padding */
+                }
+            }
         </style>
     </head>
     <body>
         <!-- Mobile Alert -->
-        <div class="mobile-alert">
-            This website is only accessible on desktop. Please use a desktop browser in fullscreen to view it.
-        </div>
+        
         <!-- Fixed Section -->
         <header>
             <div id="overlay" class="overlay">
@@ -449,13 +444,7 @@ body {
             </div>
            <br><br><br><br> <br><br><br><br>
         </div>
-        <script>
-            // JavaScript to detect mobile devices and hide content
-            if (window.innerWidth <= 1024) {
-                document.body.style.display = 'none'; // Hide the page for mobile devices
-                alert('This website is only accessible on desktop. Please use a desktop browser.');
-            }
-        </script>
+        
         <script src="js/main.js"></script>
     </body>
 </html>

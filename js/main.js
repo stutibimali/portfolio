@@ -1,4 +1,4 @@
-
+// InFO and Publication
 
 document.addEventListener("DOMContentLoaded", () => {
     const aboutText = 
@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("email-link").href = `mailto:${contactInfo.email}`;
 });
 
+// Publication Buttons
 function viewPaper() {
      // Simulate file download
      window.open('documents/Publication paper.pdf', '_blank');
@@ -79,6 +80,7 @@ function linkpublication() {
     window.open('https://ieeexplore.ieee.org/document/9716284', '_blank');
 }
 
+// Github Project 
 document.addEventListener("DOMContentLoaded", () => {
     const githubUsername = "stutibimali";  // Replace with your GitHub username
     const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const repoLink = document.createElement("a");
             repoLink.href = repo.html_url;
             repoLink.target = "_blank";
-            repoLink.textContent = "View on GitHub";
+            repoLink.innerHTML = `<i class="fab fa-github"></i> View on GitHub`; // Add GitHub icon
 
             // Append project details to the container
             repoElement.appendChild(repoTitle);
@@ -117,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Experience
 document.addEventListener("DOMContentLoaded", () => {
     const experiences = [
         {
@@ -180,6 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Education
 document.addEventListener("DOMContentLoaded", () => {
     const education = [
         {
@@ -243,47 +247,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Certificates
 document.addEventListener("DOMContentLoaded", () => {
     const Certification = `
         <ul>
             <li style="list-style-type: square;"><b>LinkedIn Learning</b> - HTML Essential Training<b style="font-size: 12px; color: #777;">  -  January 31, 2025</b><br>
-            <button onclick="showCertificate('documents/stutibimali_HTML Essential Training.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/stutibimali_HTML Essential Training.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>LinkedIn Learning</b> - Python: Working with REST and Web Data<b style="font-size: 12px; color: #777;">  -  January 30, 2025</b><br>
-            <button onclick="showCertificate('documents/StutiBimali_Python Working with REST and Web Data.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/StutiBimali_Python Working with REST and Web Data.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>LinkedIn Learning</b> - Data Science Foundations: Data Engineering<b style="font-size: 12px; color: #777;">  -  January 27, 2025</b><br>
-            <button onclick="showCertificate('documents/CertificateOfCompletion_Data Science Foundations Data Engineering-StutiB.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/CertificateOfCompletion_Data Science Foundations Data Engineering-StutiB.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Great Learning Academy</b> - Introduction to R<b style="font-size: 12px; color: #777;">  -  July 2024</b><br>
-            <button onclick="showCertificate('documents/R.png')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/R.png')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>British Airways</b> - Data Science Virtual Experience Program: Forage<b style="font-size: 12px; color: #777;">  -  February 2023 to March 2023</b><br>
-            <button onclick="showCertificate('documents/British Airways.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/British Airways.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>KPMG</b> - Data Analytics Consulting Virtual Internship: Forage<b style="font-size: 12px; color: #777;">  -  February 2023</b><br>
-            <button onclick="showCertificate('documents/KPMG.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/KPMG.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>IBM</b> - Machine Learning - Dimensionality Reduction: Cognitive Class<b style="font-size: 12px; color: #777;">  -  June 16, 2022</b><br>
-            <button onclick="showCertificate('documents/IBM ML0109EN Certificate _ Cognitive Class.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/IBM ML0109EN Certificate _ Cognitive Class.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>The Sparks Foundation</b> - Graduate Rotational Internship Program<b style="font-size: 12px; color: #777;">  -  May 2022 to June 2022</b><br>
-            <button onclick="showCertificate('documents/spark.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/spark.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>SkillUp</b> - Data Science with Python<b style="font-size: 12px; color: #777;">  -  December 23, 2021</b><br>
-            <button onclick="showCertificate('documents/datascience certificate.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/datascience certificate.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>SmartKnower</b> - Internship on Data Science<b style="font-size: 12px; color: #777;">  -  April 1, 2021 to May 31, 2021</b><br>
-            <button onclick="showCertificate('documents/4162300654.jpg')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/4162300654.jpg')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Duke University</b> - Data Science Math Skills: Coursera<b style="font-size: 12px; color: #777;">  -  August 31, 2020</b><br>
-            <button onclick="showCertificate('documents/Coursera 9EE3AXTBYLVA.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/Coursera 9EE3AXTBYLVA.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Google</b> - Operating Systems and You: Becoming a Power User: Coursera<b style="font-size: 12px; color: #777;">  -  August 6, 2020</b><br>
-            <button onclick="showCertificate('documents/google certificate3.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/google certificate3.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Google</b> - The Bits and Bytes of Computer Networking: Coursera<b style="font-size: 12px; color: #777;">  -  May 26, 2020</b><br>
-            <button onclick="showCertificate('documents/google certificate2.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/google certificate2.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Google</b> - Technical Support Fundamentals: Coursera<b style="font-size: 12px; color: #777;">  -  April 27, 2020</b><br>
-            <button onclick="showCertificate('documents/google certificate.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/google certificate.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Rhyme</b> - Object-Oriented Programming with Java: Coursera<b style="font-size: 12px; color: #777;">  -  April 25, 2020</b><br>
-            <button onclick="showCertificate('documents/java program certificate.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/java program certificate.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Coursera Project Network</b> - Object-Oriented Programming with Java<b style="font-size: 12px; color: #777;">  -  April 25, 2020</b><br>
-            <button onclick="showCertificate('documents/Coursera XGNASK4MUKAY.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/Coursera XGNASK4MUKAY.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Coursera Project Network</b> - Create Your First Python Program<b style="font-size: 12px; color: #777;">  -  April 22, 2020</b><br>
-            <button onclick="showCertificate('documents/python first certificate.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/python first certificate.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Coursera Project Network</b> - Command Line in Linux<b style="font-size: 12px; color: #777;">  -  April 21, 2020</b><br>
-            <button onclick="showCertificate('documents/Coursera DP75XSGCBYW9.pdf')">Show</button></li><br>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/Coursera DP75XSGCBYW9.pdf')">Certificate</button></li><br>
             <li style="list-style-type: square;"><b>Coursera Project Network</b> - Javascript animation for websites, storytelling, data visualization and games<b style="font-size: 12px; color: #777;">  -  April 21, 2020</b><br>
-            <button onclick="showCertificate('documents/Coursera H4SQNCA8MZXG.pdf')">Show</button></li>
+            <button class ='certificate-button' onclick="CertificateCertificate('documents/Coursera H4SQNCA8MZXG.pdf')">Certificate</button></li>
             
         </ul>
     `;
@@ -292,17 +297,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <li style="list-style-type: square;"><b>Webinar</b></li><br>
                 <ul>
                     <li style="list-style-type: circle;">' AI SOLUTION FOR ENTERPRISES AND CONTAINERISING APPLICATIONS USING E4S '<b> conducted by ANNA University</b><b style="font-size: 12px; color: #777;"> - August 14, 2020</b><br>
-                    <button onclick="showCertificate('documents/certificate AI 7-9.pdf')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/certificate AI 7-9.pdf')">Certificate</button></li>
                     <br>
                     <li style="list-style-type: circle;">' OpenPOWER BIG DATA AI '<b> conducted by University of Wisconsin Platteville</b><b style="font-size: 12px; color: #777;"> - June 19, 2020</b><br>
-                    <button onclick="showCertificate('documents/certificate3_14.pdf')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/certificate3_14.pdf')">Certificate</button></li>
                     <br>
                 </ul>
                 <br>
             <li style="list-style-type: square;"><b>Workshop</b></li><br>
                 <ul>
                     <li style="list-style-type: circle;">' Introduction to Computer Algorithms '<b> conducted by SGP GLOBAL IT ACADEMY PRIVATE LIMITED</b><b style="font-size: 12px; color: #777;"> - April 24, 2020</b><br>
-                    <button onclick="showCertificate('documents/Stuti Bimali.png')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/Stuti Bimali.png')">Certificate</button></li>
                     <br>
                     <li style="list-style-type: circle;">' UNIX AND SHELL PROGRAMMING '<b> conducted by PraLoTech Solutions LLP</b><b style="font-size: 12px; color: #777;"> - November 3, 2019</b><br>
                     
@@ -319,13 +324,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <li style="list-style-type: square;"><b>Quiz</b></li><br>
                 <ul>
                     <li style="list-style-type: circle;"> Quiz on ' Object Oriented Programming in Java '<b> organized by Department of Computer Science and Engineering, Shaikh College of Engineering and Technology Belagavi </b><b style="font-size: 12px; color: #777;"></b><br>
-                    <button onclick="showCertificate('documents/Quiz.png')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/Quiz.png')">Certificate</button></li>
                     <br>
                     <li style="list-style-type: circle;"> Online Quiz on ' C Programming '<b> organized by Department of CSE, Vemana Institute of Technology, Bengaluru </b><b style="font-size: 12px; color: #777;"> - July 14, 2020</b><br>
-                    <button onclick="showCertificate('documents/quiz2.pdf')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/quiz2.pdf')">Certificate</button></li>
                     <br>
                     <li style="list-style-type: circle;"> Quiz on ' ARM7 Microcontroller & its Instruction set '<b> organized by Department of Computer Science and Engineering, TOCE </b><b style="font-size: 12px; color: #777;"></b><br>
-                    <button onclick="showCertificate('documents/quiz1.pdf')">Show</button></li>
+                    <button class ='certificate-button' onclick="CertificateCertificate('documents/quiz1.pdf')">Certificate</button></li>
                     
                     
                 </ul>
@@ -336,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("workshop").innerHTML = worksem;
 });
 
-function showCertificate(certPath) {
+function CertificateCertificate(certPath) {
     const certificateImage = document.getElementById("certificateImage");
     const certificateIframe = document.getElementById("certificateIframe");
 
@@ -344,7 +349,7 @@ function showCertificate(certPath) {
     certificateImage.style.display = "none";
     certificateIframe.style.display = "none";
 
-    // If it's a PDF, show it in the iframe
+    // If it's a PDF, Certificate it in the iframe
     if (certPath.endsWith('.pdf')) {
         certificateIframe.src = certPath;
         certificateIframe.style.display = "block";
@@ -353,16 +358,11 @@ function showCertificate(certPath) {
         certificateImage.style.display = "block";
     }
 
-    // Show the overlay
+    // Certificate the overlay
     document.getElementById("overlay").style.display = "flex";
 }
 
 // Function to close the overlay
 function closeOverlay() {
     document.getElementById("overlay").style.display = "none";
-}
-// Hide the page for mobile devices
-if (window.innerWidth <= 1024) {
-    document.body.style.display = 'none'; // Hide the page
-    alert('This website is only accessible on desktop. Please use a desktop browser.');
 }
